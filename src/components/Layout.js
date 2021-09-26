@@ -1,17 +1,19 @@
+import React from 'react'
 import PropTypes from 'prop-types';
-
 import { Box } from 'grommet';
 
 const Layout = ({ children }) => (
   <>
-    <Box 
-      border
-      direction="column" 
-      justify="center"
-      gap="xlarge"
-      margin="medium"
-      pad="medium"
-      fill="vertical"
+    <Box
+
+      direction="column"
+      align="center" 
+      margin="xxsmall"
+      pad="xxsmall"
+      rounded="medium"
+      gap="xsmall"
+      flex={true}
+      fill={true}
     >
       {children}
     </Box>

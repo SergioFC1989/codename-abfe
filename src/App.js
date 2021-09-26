@@ -1,14 +1,15 @@
-import SearchInput from './components/SearchInput'
-import Layout from './components/Layout';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom'
+import routes from './routes';
 
-const App = () => {
-  return (
+const App = () => (
     <>
-      <Layout>
-        <SearchInput />
-      </Layout>
+      <Switch>
+        {routes.map(({ path, ...props })=> 
+          <Route key={path} path={path} {...props} />
+        )}
+      </Switch>
     </>
-  );
-}
+);
 
 export default App;
